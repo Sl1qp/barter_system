@@ -59,6 +59,6 @@ python manage.py runserver
 ```python manage.py test ads.tests.AdTestCase.test_ad_creation```
 
 Автор: Максим
-Контакты: mironov46211@yandex.ru#   b a r t e r _ p r o j e c t 
+Контакты: mironov46211@yandex.ru
  
  
