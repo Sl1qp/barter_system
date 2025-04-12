@@ -1,0 +1,23 @@
+{% extends 'ads/base.html' %}
+
+{% block title %}Создать предложение{% endblock %}
+
+{% block content %}
+    <h2 class="mb-4">Создать предложение обмена</h2>
+    <form method="post">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label class="form-label">{{ form.ad_sender.label }}</label>
+            {{ form.ad_sender }}
+        </div>
+        <div class="mb-3">
+            <label class="form-label">{{ form.ad_receiver.label }}</label>
+            {{ form.ad_receiver }}
+        </div>
+        <div class="mb-3">
+            <label class="form-label">{{ form.comment.label }}</label>
+            {{ form.comment }}
+        </div>
+        <button type="submit" class="btn btn-primary">Отправить</button>
+    </form>
+{% endblock %}

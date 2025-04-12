@@ -1,0 +1,13 @@
+{% extends "ads/base.html" %}
+
+{% block content %}
+<div class="container">
+    <h2>Удалить предложение обмена</h2>
+    <p>Вы уверены, что хотите удалить предложение от "{{ object.ad_sender.title }}" к "{{ object.ad_receiver.title }}"?</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Удалить</button>
+        <a href="{% url 'ads:proposal-list' %}" class="btn btn-secondary">Отмена</a>
+    </form>
+</div>
+{% endblock %}

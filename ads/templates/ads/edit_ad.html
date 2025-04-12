@@ -1,0 +1,12 @@
+{% extends 'ads/base.html' %}
+
+{% block title %}Редактировать объявление{% endblock %}
+
+{% block content %}
+    <h2 class="mb-4">Редактировать объявление</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Сохранить</button>
+    </form>
+{% endblock %}
